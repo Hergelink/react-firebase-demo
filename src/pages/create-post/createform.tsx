@@ -37,17 +37,21 @@ function Createform() {
       username: user?.displayName,
       userId: user?.uid,
     });
-    navigate('/')
+    navigate('/');
   };
 
   return (
     <form onSubmit={handleSubmit(onCreatePost)}>
-        <h1>Create Post</h1>
+      <h1>Create Post</h1>
       <input placeholder='Title...' {...register('title')} />
       <p className='errorTags'>{errors.title?.message}</p>
-      <textarea placeholder='Description...' rows={8} {...register('description')} />
+      <textarea
+        placeholder='Description...'
+        rows={8}
+        {...register('description')}
+      />
       <p className='errorTags'>{errors.description?.message}</p>
-      <input type='submit' id='submit-btn'/>
+      <input type='submit' id='submit-btn' />
     </form>
   );
 }

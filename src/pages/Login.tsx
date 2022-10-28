@@ -13,9 +13,9 @@ function Login() {
   };
 
   return (
-    <div>
-      <p>Sign in with google to continue</p>
-      <button onClick={signInWithGoogle}>Sign in with google</button>
+    <div className='sign-in-div'>
+      <p>Sign in with Google to continue</p>
+      <button id='sign-in-button' onClick={signInWithGoogle}>Sign in with google</button>
     </div>
   );
 }
